@@ -168,6 +168,7 @@ section a {
     font-weight: bold;
 }
 
+
 /* INPUT */
 input {
     padding: 12px;
@@ -187,6 +188,7 @@ button {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 17px;
 }
 
 button:hover {
@@ -213,7 +215,12 @@ footer {
         gap: 10px;
         padding: 15px 20px;
     }
-
+    #form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    }
     nav {
         flex-wrap: wrap;
         justify-content: center;
