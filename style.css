@@ -199,6 +199,9 @@ footer {
         justify-content: center;
         gap: 15px;
     }
+    main{
+        padding: 30px 20px;
+    }
 
 }
 #particles {
