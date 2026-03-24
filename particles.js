@@ -1,14 +1,21 @@
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+}
+
+resizeCanvas();
 
 let particles = [];
-const mouse = {
-    x: null,
-    y: null
-};
+const mouse = { x: null, y: null };
+
+// Detecta mobile
+const isMobile = window.innerWidth < 768;
+
+// Menos partículas no celular
+const PARTICLE_COUNT = isMobile ? 35 : 120;
 
 window.addEventListener("mousemove", (e) => {
     mouse.x = e.x;
@@ -28,14 +35,15 @@ class Particle {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // interação com o mouse
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (!isMobile) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 100) {
-            this.x -= dx * 0.02;
-            this.y -= dy * 0.02;
+            if (distance < 100) {
+                this.x -= dx * 0.02;
+                this.y -= dy * 0.02;
+            }
         }
     }
 
@@ -49,7 +57,7 @@ class Particle {
 
 function init() {
     particles = [];
-    for (let i = 0; i < 120; i++) {
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
         particles.push(new Particle());
     }
 }
@@ -68,8 +76,14 @@ function animate() {
 init();
 animate();
 
+// Resize otimizado (corrige bug no celular)
+let resizeTimeout;
+
 window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+        resizeCanvas();
+        init();
+    }, 200);
 });
