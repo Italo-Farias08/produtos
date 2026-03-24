@@ -87,3 +87,14 @@ window.addEventListener("resize", () => {
         init();
     }, 200);
 });
+function inscrever() {
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem");
+
+    if (email === "") {
+        mensagem.textContent = "Digite um email válido.";
+        return;
+    }
+
+    mensagem.textContent = "Parabéns, você está inscrito!";
+}

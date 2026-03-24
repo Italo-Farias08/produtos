@@ -19,7 +19,7 @@
     <section class="fundo" id="inicio">
       <h1>Curiosidades de <br> Enfermagem</h1>
       <p>Descubra fatos interessantes e curiosos <br> sobre a profissão de enfermagem.</p>
-      <a href="">Veja Curiosidades</a>
+      <a href="#">Veja Curiosidades</a>
     </section>
     <section id="curiosidades">
        <h2>Curiosidades sobre Enfermagem</h2>
@@ -42,10 +42,11 @@
     <section>
       <h3>Receba Curiosidades de Enfermagem</h3>
       <p>Inscreva-se para receber curiosidades e dicas de enfermagem diretamente no seu e-mail!</p>
-      <div class="grande">
-        <input type="email" name="email" placeholder="Seu Email" required>
-        <button>Inscrever</button>
+      <div class="grande" id="form">
+        <input type="email" id="email" placeholder="Seu Email" required>
+        <button onclick="inscrever()">Inscrever</button>
       </div>
+      <p id="mensagem" class="jsty"></p>
     </section>
     <section id="artigos">
       <h2>Artigos Recentes</h2>
