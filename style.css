@@ -54,6 +54,7 @@ nav a:hover {
     align-items: center;
     overflow: hidden;
     border-radius: 10px;
+    min-width: 60vw;
 }
 
 /* PARTICULAS */
