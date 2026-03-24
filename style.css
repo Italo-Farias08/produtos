@@ -179,6 +179,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -202,6 +203,9 @@ footer {
     }
     main{
         padding: 30px 20px;
+    }
+    .grande{
+        width: 100%;
     }
 
 }
