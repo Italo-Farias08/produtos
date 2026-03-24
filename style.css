@@ -71,6 +71,7 @@ nav a:hover {
     background-size: 40px 40px;
     animation: mover 20s linear infinite;
     opacity: 0.15;
+    pointer-events: none;
 }
 
 @keyframes mover {
@@ -198,6 +199,10 @@ footer {
     padding: 20px;
     border-top: 1px solid rgba(255,255,255,0.05);
     color: #94a3b8;
+}
+#fot{
+    color: #94a3b8; 
+    text-decoration: none;
 }
 @media (max-width: 768px) {
 
