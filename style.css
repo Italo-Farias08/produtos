@@ -1,17 +1,14 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #0f172a;
     color: #e2e8f0;
 }
-
-/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,19 +18,16 @@ header {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-
 #principal {
     font-size: 1.8em;
     color: #38bdf8;
     text-shadow: 0px 0px 10px #000000;
 }
-
 nav {
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
 }
-
 nav a {
     color: #cbd5f5;
     text-decoration: none;
@@ -46,8 +40,6 @@ a:active{
 nav a:hover {
     color: #38bdf8;
 }
-
-/* HERO */
 .fundo {
     position: relative;
     padding: 120px 20px;
@@ -60,8 +52,6 @@ nav a:hover {
     border-radius: 10px;
     min-width: 60vw;
 }
-
-/* PARTICULAS */
 .fundo::before {
     content: "";
     position: absolute;
@@ -73,24 +63,20 @@ nav a:hover {
     opacity: 0.15;
     pointer-events: none;
 }
-
 @keyframes mover {
     0% { transform: translate(0,0); }
     100% { transform: translate(-200px, -200px); }
 }
-
 .fundo h1 {
     font-size: 3em;
     margin-bottom: 15px;
      text-shadow: 0px 0px 10px #000000;
 }
-
 .fundo p {
     margin-bottom: 25px;
     color: #cbd5f5;
     font-size: 1.1em;
 }
-
 .fundo a {
     display: inline-block; 
     background: linear-gradient(135deg, #38bdf8, #6366f1);
@@ -101,19 +87,14 @@ nav a:hover {
     transition: 0.3s;
     width: auto; /* garante que não estique */
 }
-
 .fundo a:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(56,189,248,0.3);
 
 }
-
-/* MAIN */
 main {
     padding: 50px 60px;
 }
-
-/* TITULOS */
 section h2 {
     margin-bottom: 25px;
     font-size: 1.6em;
@@ -125,22 +106,16 @@ section h2 {
     color: rgba(255, 255, 255, 0.658);
     font-size: 1.7em;
 }
-
-/* CARDS EM ROW */
 section {
     margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
-/* força título ocupar linha toda */
 section h2,
 section h3 {
     width: 100%;
 }
-
-/* CARDS */
 section div {
     flex: 1 1 300px;
     background: rgba(30, 41, 59, 0.6);
@@ -150,26 +125,19 @@ section div {
     border: 1px solid rgba(255,255,255,0.05);
     transition: 0.3s;
 }
-
 section div:hover {
     transform: translateY(-6px);
     border-color: #38bdf8;
 }
-
-/* TEXTOS */
 section p {
     margin: 10px 0;
     color: #cbd5f5;
 }
-
 section a {
     color: #38bdf8;
     text-decoration: none;
     font-weight: bold;
 }
-
-
-/* INPUT */
 input {
     padding: 12px;
     border-radius: 8px;
@@ -179,7 +147,6 @@ input {
     margin-right: 10px;
     font-size: 16px;
 }
-
 button {
     padding: 12px 18px;
     border: none;
@@ -190,7 +157,6 @@ button {
     transition: 0.3s;
     font-size: 17px;
 }
-
 button:hover {
     transform: scale(1.05);
 }
@@ -202,9 +168,6 @@ span{
 h4{
     margin-bottom: 8px;
 }
-
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;

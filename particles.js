@@ -11,10 +11,9 @@ resizeCanvas();
 let particles = [];
 const mouse = { x: null, y: null };
 
-// Detecta mobile
+
 const isMobile = window.innerWidth < 768;
 
-// Menos partículas no celular
 const PARTICLE_COUNT = isMobile ? 35 : 120;
 
 window.addEventListener("mousemove", (e) => {
@@ -75,8 +74,6 @@ function animate() {
 
 init();
 animate();
-
-// Resize otimizado (corrige bug no celular)
 let resizeTimeout;
 
 window.addEventListener("resize", () => {
